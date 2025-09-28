@@ -1,6 +1,7 @@
 /* --- En este archivo se implementa todo lo respectivo a busqueda de subsecuencias */
 
 // Se implementa el algoritmo KMP (Knuth-Morris-Pratt) para la búsqueda eficiente de patrones en un texto.
+// Codigo adaptado de geeksforgeeks --> https://www.geeksforgeeks.org/cpp/knuth-morris-pratt-in-c/ 
 #ifndef KMP_H
 #define KMP_H
 #include <vector>
