@@ -7,7 +7,8 @@ using namespace std;
 // Función para leer el contenido de un archivo
 string leerArchivo(const string& nombreArchivo) {
     ifstream archivo(nombreArchivo);
-
+    
+    // Verificar si el archivo se abrió correctamente
     if (!archivo.is_open()) {
         cerr << "No se pudo abrir el archivo: " << nombreArchivo << endl;
         return "";
