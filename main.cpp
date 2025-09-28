@@ -4,15 +4,35 @@
 #include <fstream>
 using namespace std;
 
+// Función para leer el contenido de un archivo
+string leerArchivo(const string& nombreArchivo) {
+    ifstream archivo(nombreArchivo);
 
+    if (!archivo.is_open()) {
+        cerr << "No se pudo abrir el archivo: " << nombreArchivo << endl;
+        return "";
+    }
+
+    // Leer todo el contenido del archivo
+    string contenido;
+    string linea;
+    
+    // Leer línea por línea
+    while (getline(archivo, linea)) {
+        contenido += linea + "\n";
+    }
+
+    archivo.close();
+    return contenido;
+}
 
 int main() {
     // Leer archivos de transmisión y código malicioso
-    std:: string transmission1 = "transmission1.txt";
-    std:: string transmission2 = "transmission2.txt";
-    std:: string mcode1 = "mcode1.txt";
-    std:: string mcode2 = "mcode2.txt";
-    std:: string mcode3 = "mcode3.txt";
+    string transmission1 = leerArchivo("transmission1.txt");
+    string transmission2 = leerArchivo("transmission2.txt");
+    string mcode1 = leerArchivo("mcode1.txt");
+    string mcode2 = leerArchivo("mcode2.txt");
+    string mcode3 = leerArchivo("mcode3.txt");
 
     // Parte 1: Archivos de transmisión (6 busquedas)
 
