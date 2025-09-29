@@ -1,0 +1,8 @@
+Luis Enrique Gutierrez Mendioroz - A00837481
+Trabaje en la lectura correcta de archivos de prueba y darle el formato correcto al archivo main.cpp
+Adicionalmente, trabaje e invesriga la logica detras de busqueda de subsecuencias implementando dichos 
+descubrimientos en kmp.h (matriz LPS y analisis de cadenas de texto) y despues aplicacando en main. 
+
+Iñaki
+
+Claudio
