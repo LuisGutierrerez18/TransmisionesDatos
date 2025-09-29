@@ -4,6 +4,7 @@
 #include <fstream>
 
 #include "kmp.h"
+#include "lcs.h"
 
 using namespace std;
 
@@ -66,6 +67,14 @@ int main() {
 
 
     // Parte 3: Busqueda de substrigs mas comun
-
+    // No olviden compilar lcs.cpp junto con este archivo para evitar errores
+    // Pueden usar cl.exe main.cpp lcs.cpp y despues ejecutar main.exe
+    pair<int, int> res = substringMasLargoComun(transmission1, transmission2);
+    if (res.first != -1) {
+        cout << "Substring mas largo comun encontrado en transmission1 desde la posicion "
+             << res.first << " hasta la posicion " << res.second << endl;
+    } else {
+        cout << "No se encontro substring comun." << endl;
+    }
     return 0;
 }
